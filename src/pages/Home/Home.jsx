@@ -1,20 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './Home.scss';
 
 function Home() {
   return (
     <div className="home">
-      <h2>Hompage</h2>
-
       <div className="home__header">
         <div className="home__header-left">
-          {/* link */}
-          {/* link */}
+          <Link to="/about">About</Link>
+          <Link to="/store">Store</Link>
         </div>
         <div className="home__header-right">
-          {/* link */}
-          {/* link */}
+          <Link to="/gmail">Gmail</Link>
+          <Link to="/images">Images</Link>
           {/* Icon */}
           {/* Avatar */}
         </div>
