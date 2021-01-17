@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchIcon from '@material-ui/icons/Search';
 import MicIcon from '@material-ui/icons/Mic';
+import { Button } from '@material-ui/core';
 
 import './Search.scss';
 
@@ -11,6 +12,11 @@ function Search() {
         <SearchIcon className="search__inputIcon" />
         <input />
         <MicIcon />
+      </div>
+
+      <div className="search__buttons">
+        <Button variant="outlined">Google Search</Button>
+        <Button variant="outlined">React tutorial</Button>
       </div>
     </div>
   );
