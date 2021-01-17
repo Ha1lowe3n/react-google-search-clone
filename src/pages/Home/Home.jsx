@@ -4,6 +4,7 @@ import AppsIcon from '@material-ui/icons/Apps';
 import { Avatar } from '@material-ui/core';
 
 import './Home.scss';
+import Search from '../../components/Search';
 
 function Home() {
   return (
@@ -26,7 +27,9 @@ function Home() {
           src="https://www.google.ru/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
           alt="logo"
         />
-        <div className="home__inputContainer">{/* Search */}</div>
+        <div className="home__inputContainer">
+          <Search />
+        </div>
       </div>
     </div>
   );
