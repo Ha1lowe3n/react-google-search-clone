@@ -33,11 +33,7 @@ function Search({ hideButtons = false }) {
     <form className="search">
       <div className="search__input">
         <SearchIcon className="search__inputIcon" />
-        <input
-          placeholder="ИЛЮХА ХАОСДНО"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-        />
+        <input value={input} onChange={(e) => setInput(e.target.value)} />
         <MicIcon />
       </div>
 

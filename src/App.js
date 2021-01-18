@@ -4,15 +4,15 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 
 import Home from './pages/Home/Home';
+import SearchPage from './pages/SearchPage/SearchPage';
+
 
 function App() {
   return (
     <div className="app">
       <Router>
         <Switch>
-          <Route path="/search">
-            <h2>SearchPage</h2>
-          </Route>
+          <Route path="/search" component={SearchPage} />
           <Route path="/" component={Home} />
         </Switch>
       </Router>
