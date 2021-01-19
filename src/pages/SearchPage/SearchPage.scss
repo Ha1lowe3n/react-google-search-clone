@@ -16,7 +16,7 @@
     margin-right: 50px;
   }
 
-  &__headerBody>.search>.search__input {
+  &__headerBody > .search > .search__input {
     margin-top: 0;
     width: unset;
     margin: unset;
@@ -76,7 +76,7 @@
       text-decoration: underline;
     }
 
-    &>h2 {
+    & > h2 {
       color: #1a0dab;
       font-weight: 500;
     }
@@ -84,5 +84,12 @@
 
   &__resultSnippet {
     margin-top: 5px;
+  }
+
+  &__resultImage {
+    object-fit: contain;
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
   }
 }

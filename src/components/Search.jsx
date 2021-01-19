@@ -10,6 +10,14 @@ import { actionTypes } from '../reducer';
 
 import './Search.scss';
 
+const someWord = [
+  'Как дела?',
+  'Good night',
+  'Best React tutorial',
+  'Как джуну найти работу',
+  'Как защититься от НЛО',
+];
+
 function Search({ hideButtons = false }) {
   const [{}, dispatch] = useStateValue();
 
@@ -18,8 +26,6 @@ function Search({ hideButtons = false }) {
 
   const search = (e) => {
     e.preventDefault();
-
-    console.log('enter enter');
 
     dispatch({
       type: actionTypes.SET_SEARCH_TERM,
@@ -42,7 +48,9 @@ function Search({ hideButtons = false }) {
           <Button type="submit" onClick={search} variant="outlined">
             Google Search
           </Button>
-          <Button variant="outlined">Я ХЗ ЧЕ СЮДА НАПИСАТЬ</Button>
+          <Button onClick={(e) => setInput(e.target.innerText)} variant="outlined">
+            {someWord[Math.floor(Math.random() * someWord.length)]}
+          </Button>
         </div>
       ) : (
         <div className="search__buttons">
@@ -54,7 +62,7 @@ function Search({ hideButtons = false }) {
             Google Search
           </Button>
           <Button className="search__buttonsHidden" variant="outlined">
-            Я ХЗ ЧЕ СЮДА НАПИСАТЬ
+            wtf
           </Button>
         </div>
       )}

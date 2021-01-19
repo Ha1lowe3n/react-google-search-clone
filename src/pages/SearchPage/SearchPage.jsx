@@ -72,16 +72,24 @@ function SearchPage() {
         </div>
       </div>
 
-      {true && (
+      {term && (
         <div className="searchPage__results">
           <p className="searchPage__resultsCount">
             About {data?.searchInformation.formattedTotalResults} results (
             {data?.searchInformation.formattedSearchTime} seconds) for {term}
           </p>
 
-          {data?.items.map((item) => (
-            <div className="searchPage__result">
+          {data?.items.map((item, i) => (
+            <div className="searchPage__result" key={`${item.title}_${i}`}>
               <a href={item.link} className="searchPage__resultLink">
+                {item.pagemap?.cse_image?.length > 0 && item.pagemap?.cse_image[0]?.src && (
+                  <img
+                    className="searchPage__resultImage"
+                    src={item.pagemap?.cse_image[0]?.src}
+                    alt="image"
+                  />
+                )}
+
                 {item.displayLink}
               </a>
               <a className="searchPage__resultTitle" href={item.link}>
