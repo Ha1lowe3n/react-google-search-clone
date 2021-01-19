@@ -22,4 +22,31 @@
     margin: unset;
     max-width: unset;
   }
+
+  &__options {
+    display: flex;
+    align-items: center;
+    color: grey;
+
+    & a {
+      text-decoration: none;
+      color: grey;
+      margin-left: 5px;
+    }
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  &__optionsRight,
+  &__optionsLeft {
+    display: flex;
+  }
+
+  &__optionsRight {
+    margin-left: 80px;
+  }
 }
